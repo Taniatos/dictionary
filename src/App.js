@@ -1,12 +1,14 @@
 
 import './App.css';
+import Dictionary from "./Dictionary"
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Hello World
-      </header>
+      <main>
+        <Dictionary/>
+      </main>
+      <footer className="text-center">The app is coded by Tetiana Korchynska and is open-sourced</footer>
     </div>
   );
 }

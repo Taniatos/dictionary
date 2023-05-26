@@ -1,0 +1,94 @@
+:root {
+  --white: #fffef8;
+  --black: #333233;
+  --yellow: #eeedd4;
+}
+App {
+  font-family: "Montserrat", sans-serif;
+}
+.Dictionary {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+  margin-top: 30px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  border-radius: 8px;
+}
+.img-book {
+  max-width: 200px;
+  margin: 32px auto;
+  display: block;
+}
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 60px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  color: var(--black);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
+}
+h2 {
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: var(--black);
+  font-weight: 400;
+}
+h3 {
+  font-size: 14px;
+  margin-top: 8px;
+  color: var(--black);
+  font-weight: 300;
+}
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+}
+.search-word {
+  width: 300px;
+  height: 50px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  margin-right: 12px;
+  background: var(--yellow);
+  border: 0.5px solid #333233;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.search-button {
+  background: var(--yellow);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid #333233;
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  cursor: pointer;
+  transition: ease-in-out 900ms;
+}
+.search-button:hover {
+  background: linear-gradient(
+    180deg,
+    #dad8ac 0%,
+    rgba(213, 210, 146, 0.625) 37.5%,
+    rgba(218, 216, 172, 0.380208) 61.98%,
+    rgba(134, 132, 78, 0.64) 100%
+  );
+}
+footer {
+  color: var(--black);
+  font-size: 14px;
+  margin: 30px 0;
+}
