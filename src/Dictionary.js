@@ -13,7 +13,7 @@ export default function Dictionary() {
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/317/original/book.png?1685129284"
         className="img-book"
-        alt="Book Image"
+        alt="Book"
       />
       <h1 className="text-center">Lexicopia</h1>
       <h2 className="text-center">Online Dictionary</h2>
