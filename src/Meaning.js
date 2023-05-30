@@ -5,15 +5,11 @@ import Synonyms from "./Synonyms";
 export default function Meaning(props) {
   console.log(props.meaning);
   return (
-    <div className="Meaning">
+    <section className="Meaning">
       <h5>{props.meaning.partOfSpeech}</h5>
-      <p>
-        {props.meaning.definition}
-        <br />
-        <em>{props.meaning.example}</em>
-        <br />
-        <Synonyms synonyms={props.meaning.synonyms} />
-      </p>
-    </div>
+      <p className="Definition">{props.meaning.definition}</p>
+      <p className="Example">{props.meaning.example}</p>
+      <Synonyms synonyms={props.meaning.synonyms} />
+    </section>
   );
 }
