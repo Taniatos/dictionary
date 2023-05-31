@@ -21,6 +21,6 @@ export default function Results(props) {
       </div>
     );
   } else {
-    return null;
+    return "Sorry, we do not have the definition of this word.";
   }
 }
