@@ -1,7 +1,7 @@
 :root {
   --white: #fffef8;
   --black: #333233;
-  --yellow: #eeedd4;
+  --yellow: #efeede;
 }
 App {
   font-family: "Montserrat", sans-serif;
@@ -17,14 +17,14 @@ App {
   border-radius: 8px;
 }
 .img-book {
-  max-width: 200px;
-  margin: 32px auto;
+  max-width: 140px;
+  margin: 18px auto;
   display: block;
 }
 h1 {
   font-family: "EB Garamond", serif;
   font-size: 60px;
-  margin-top: 28px;
+  margin-top: 18px;
   margin-bottom: 8px;
   color: var(--black);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
@@ -59,14 +59,14 @@ form {
   color: var(--black);
   margin-right: 12px;
   background: var(--yellow);
-  border: 0.5px solid #333233;
+  border: 0.5px solid #838580;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 .search-button {
   background: var(--yellow);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  border: 0.5px solid #333233;
+  border: 0.5px solid #838580;
   border-radius: 4px;
   padding-left: 12px;
   padding-right: 12px;
@@ -150,4 +150,9 @@ footer {
   color: var(--black);
   font-size: 14px;
   margin: 30px 0;
+}
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #7a7966;
 }
