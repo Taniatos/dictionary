@@ -5,16 +5,19 @@ import Results from "./Results";
 import Photos from "./Photos";
 
 export default function Dictionary(props) {
+  // State variables
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
+  // To handle the response from the dictionary API
   function handleResponse(response) {
     setResults(response.data);
   }
+
+  // To handle the response from the Pexels API for photos
   function handlePexelsResponse(response) {
-    console.log(response.data);
     setPhotos(response.data.photos);
   }
 
@@ -27,20 +30,27 @@ export default function Dictionary(props) {
     let photoApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${photoApiKey}`;
     axios.get(photoApiUrl).then(handlePexelsResponse);
   }
+
+  // To handle form submission
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
+
+  // To load data when the component is first rendered
   function load() {
     setLoaded(true);
     search();
   }
 
+  // To handle changes in the keyword input field
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
+
   if (loaded) {
     return (
+      // Rendered content when data is loaded
       <div className="Dictionary">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/317/original/book.png?1685129284"
@@ -54,7 +64,7 @@ export default function Dictionary(props) {
             <input
               type="search"
               className="search-word"
-              autocomplete="off"
+              autoComplete="off"
               onChange={handleKeywordChange}
               defaultValue={props.defaultKeyword}
             />
@@ -68,7 +78,7 @@ export default function Dictionary(props) {
         </div>
         <h3 className="text-center">Suggestions: cat, orange, palm ...</h3>
         <Results results={results} />
-        <Photos photos={photos}/>
+        <Photos photos={photos} />
       </div>
     );
   } else {
